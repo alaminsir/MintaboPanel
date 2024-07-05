@@ -40,7 +40,8 @@ class Autoload extends AutoloadConfig
      * @var array<string, list<string>|string>
      */
     public $psr4 = [
-        APP_NAMESPACE => APPPATH,
+        APP_NAMESPACE => APPPATH, // For custom app namespace
+        'Config'      => APPPATH . 'Config',
     ];
 
     /**
@@ -60,7 +61,9 @@ class Autoload extends AutoloadConfig
      *
      * @var array<string, string>
      */
-    public $classmap = [];
+    public $classmap = [
+        'Globals' => APPPATH . 'Config/Globals.php'
+    ];
 
     /**
      * -------------------------------------------------------------------
