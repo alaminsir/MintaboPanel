@@ -14,55 +14,84 @@ class Globals extends BaseConfig
     public static $productSettings = array();
     public static $storageSettings = array();
     public static $settings = array();
+    public static $options = array();
     public static $customRoutes = array();
     public static $languages = array();
     public static $defaultLang = array();
     public static $languageTranslations = array();
     public static $rolesPermissions = array();
     public static $activeLang = array();
-    public static $langBaseUrl = "";
+    public static $langBaseUrl = '';
     public static $langSegment = '';
     public static $authCheck = false;
     public static $authUser = null;
-    public static $darkMode = 0;
     public static $currencies = array();
     public static $defaultCurrency = array();
     public static $defaultLocation = array();
+    public static $darkMode = 0;
+
 
     public static function setGlobals()
     {
+        // Database Connection 
         self::$db = \Config\Database::connect();
         $session = \Config\Services::session();
         //set themes
         self::$themes = self::$db->table('themes')->get()->getResult();
         //set general settings
         self::$generalSettings = self::$db->table('general_settings')->where('id', 1)->get()->getRow();
-        //set payment settings
-        self::$paymentSettings = self::$db->table('payment_settings')->where('id', 1)->get()->getRow();
-        //set payment settings
-        self::$productSettings = self::$db->table('product_settings')->where('id', 1)->get()->getRow();
-        //set storage settings
-        self::$storageSettings = self::$db->table('storage_settings')->where('id', 1)->get()->getRow();
-        //set routes working here
-        self::$customRoutes = self::$db->table('routes')->get()->getRow();
         //set routes
-        //    $routes = self::$db->table('routes')->get()->getResult();
-        //    self::$customRoutes = new \stdClass();
-        //    if (!empty($routes)) {
-        //        foreach ($routes as $route) {
-        //            $routeKey = $route->route_key;
-        //            self::$customRoutes->$routeKey = $route->route;
-        //        }
-        //    }
-        
+        $routes = self::$db->table('routes')->get()->getResult();
+        self::$customRoutes = new \stdClass();
+        if (!empty($routes)) {
+            foreach ($routes as $route) {
+                $routeKey = $route->route_key;
+                self::$customRoutes->$routeKey = $route->route;
+            }
+        }
+
+
+
         //set languages
         self::$languages = self::$db->table('languages')->where('status', 1)->get()->getResult();
-        //set roles permissions
-        self::$rolesPermissions = self::$db->table('roles_permissions')->get()->getResult();
         //set timezone
         if (!empty(self::$generalSettings->timezone)) {
             date_default_timezone_set(self::$generalSettings->timezone);
         }
+        //set active language
+        self::$defaultLang = self::$db->table('languages')->where('id', self::$generalSettings->site_lang)->get()->getRow();
+        if (empty(self::$defaultLang)) {
+            self::$defaultLang = self::$db->table('languages')->get()->getFirstRow();
+        }
+        $langSegment = getSegmentValue(1);
+        $langId = null;
+        if (!empty(self::$languages)) {
+            foreach (self::$languages as $lang) {
+                if ($langSegment == $lang->short_form) {
+                    $langId = $lang->id;
+                    break;
+                }
+            }
+        }
+        if (empty($langId)) {
+            $langId = self::$defaultLang->id;
+        }
+        self::setActiveLanguage($langId);
+        if (empty(self::$activeLang)) {
+            self::$activeLang = self::$defaultLang;
+        }
+        $session->set('activeLangId', self::$activeLang->id);
+        //set language base URL
+        self::$langBaseUrl = base_url(self::$activeLang->short_form);
+        if (self::$activeLang->id == self::$defaultLang->id) {
+            self::$langBaseUrl = base_url();
+        }
+        //set settings
+        self::$settings = self::$db->table('settings')->where('lang_id', self::$activeLang->id)->get()->getRow();
+
+
+
+
 
 
 
@@ -80,6 +109,7 @@ class Globals extends BaseConfig
             }
         }
 
+
         //set dark mode
         $mode = self::$generalSettings->theme_mode;
         if (!empty(helperGetCookie('theme_mode'))) {
@@ -88,12 +118,6 @@ class Globals extends BaseConfig
         if ($mode == 'dark') {
             self::$darkMode = 1;
         }
-
-
-
-
-
-
 
 
     }
@@ -123,7 +147,6 @@ class Globals extends BaseConfig
         }
     }
 
-
     public static function updateLangBaseURL($shortForm)
     {
         if(self::$defaultLang->short_form == $shortForm){
@@ -133,4 +156,5 @@ class Globals extends BaseConfig
         }
     }
 }
+
 Globals::setGlobals();

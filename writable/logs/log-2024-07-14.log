@@ -1,0 +1,72 @@
+CRITICAL - 2024-07-14 03:29:47 --> ErrorException: Undefined variable $activeLang
+[Method: GET, Route: market]
+in APPPATH\Views\market\partials\_header.php on line 2.
+ 1 APPPATH\Views\market\partials\_header.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activeLang', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\market\\partials\\_header.php', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\market\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('market/partials/_header', [], true)
+ 5 APPPATH\Controllers\Market\Home.php(11): view('market/partials/_header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Market\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Market\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 04:47:52 --> Error: Call to undefined function user()
+[Method: GET, Route: panel]
+in APPPATH\Views\panel\includes\_header.php on line 105.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('panel/includes/_header', [], true)
+ 4 APPPATH\Controllers\Panel\Dashboard.php(9): view('panel/includes/_header')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 05:20:05 --> ErrorException: Undefined variable $baseSettings
+[Method: GET, Route: /]
+in APPPATH\Views\themes\onebook\index.php on line 8.
+ 1 APPPATH\Views\themes\onebook\index.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseSettings', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\index.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/index', [], true)
+ 5 APPPATH\Common.php(89): view('themes/onebook/index', [...])
+ 6 APPPATH\Controllers\Web\Home.php(22): themeView('index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 05:20:07 --> ErrorException: Undefined variable $baseSettings
+[Method: GET, Route: /]
+in APPPATH\Views\themes\onebook\index.php on line 8.
+ 1 APPPATH\Views\themes\onebook\index.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseSettings', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\index.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/index', [], true)
+ 5 APPPATH\Common.php(89): view('themes/onebook/index', [...])
+ 6 APPPATH\Controllers\Web\Home.php(22): themeView('index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 05:29:03 --> ErrorException: Undefined variable $activeLang
+[Method: GET, Route: /]
+in APPPATH\Views\themes\onebook\index.php on line 16.
+ 1 APPPATH\Views\themes\onebook\index.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activeLang', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\index.php', 16)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/index', [], true)
+ 5 APPPATH\Common.php(89): view('themes/onebook/index', [...])
+ 6 APPPATH\Controllers\Web\Home.php(22): themeView('index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

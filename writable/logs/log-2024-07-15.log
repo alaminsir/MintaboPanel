@@ -1,0 +1,845 @@
+ERROR - 2024-07-15 00:51:55 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'mintabo', 3306, '', 0)
+#1 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xampp\htdocs\MintaboPanel\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\MintaboPanel\app\Config\Globals.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\MintaboPanel\app\Config\Globals.php(147): Config\Globals::setGlobals()
+#6 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs...')
+#7 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs...')
+#8 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#9 E:\xampp\htdocs\MintaboPanel\app\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#10 E:\xampp\htdocs\MintaboPanel\system\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs...')
+#11 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#12 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#13 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 E:\xampp\htdocs\MintaboPanel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#15 E:\xampp\htdocs\MintaboPanel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 E:\xampp\htdocs\MintaboPanel\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xampp\htdocs\MintaboPanel\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xampp\htdocs\MintaboPanel\app\Config\Globals.php(36): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xampp\htdocs\MintaboPanel\app\Config\Globals.php(147): Config\Globals::setGlobals()
+#5 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs...')
+#6 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs...')
+#7 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#8 E:\xampp\htdocs\MintaboPanel\app\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#9 E:\xampp\htdocs\MintaboPanel\system\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#11 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#12 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 E:\xampp\htdocs\MintaboPanel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 E:\xampp\htdocs\MintaboPanel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 E:\xampp\htdocs\MintaboPanel\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2024-07-15 00:51:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `themes`', [], false)
+ 3 APPPATH\Config\Globals.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Config\Globals.php(147): Config\Globals::setGlobals()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+ 8 APPPATH\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+ 9 SYSTEMPATH\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Routes.php')
+10 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-15 00:52:07 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'mintabo', 3306, '', 0)
+#1 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xampp\htdocs\MintaboPanel\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\MintaboPanel\app\Config\Globals.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\MintaboPanel\app\Config\Globals.php(147): Config\Globals::setGlobals()
+#6 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs...')
+#7 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs...')
+#8 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#9 E:\xampp\htdocs\MintaboPanel\app\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#10 E:\xampp\htdocs\MintaboPanel\system\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs...')
+#11 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#12 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#13 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 E:\xampp\htdocs\MintaboPanel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#15 E:\xampp\htdocs\MintaboPanel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 E:\xampp\htdocs\MintaboPanel\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xampp\htdocs\MintaboPanel\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xampp\htdocs\MintaboPanel\app\Config\Globals.php(36): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xampp\htdocs\MintaboPanel\app\Config\Globals.php(147): Config\Globals::setGlobals()
+#5 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs...')
+#6 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs...')
+#7 E:\xampp\htdocs\MintaboPanel\system\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#8 E:\xampp\htdocs\MintaboPanel\app\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#9 E:\xampp\htdocs\MintaboPanel\system\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#11 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#12 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 E:\xampp\htdocs\MintaboPanel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 E:\xampp\htdocs\MintaboPanel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 E:\xampp\htdocs\MintaboPanel\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2024-07-15 00:52:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `themes`', [], false)
+ 3 APPPATH\Config\Globals.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Config\Globals.php(147): Config\Globals::setGlobals()
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+ 8 APPPATH\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+ 9 SYSTEMPATH\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Routes.php')
+10 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 07:38:54 --> Error: Access to undeclared static property Config\Globals::$darkMode
+[Method: GET, Route: /]
+in APPPATH\Controllers\Web\WebBaseController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Web\WebBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 07:39:16 --> Error: Access to undeclared static property Config\Globals::$darkMode
+[Method: GET, Route: /]
+in APPPATH\Controllers\Web\WebBaseController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Web\WebBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 07:39:18 --> Error: Access to undeclared static property Config\Globals::$darkMode
+[Method: GET, Route: /]
+in APPPATH\Controllers\Web\WebBaseController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Web\WebBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 07:39:19 --> Error: Access to undeclared static property Config\Globals::$darkMode
+[Method: GET, Route: /]
+in APPPATH\Controllers\Web\WebBaseController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Web\WebBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 07:40:39 --> Error: Call to undefined function Config\helperGetCookie()
+[Method: GET, Route: /]
+in APPPATH\Config\Globals.php on line 113.
+ 1 APPPATH\Config\Globals.php(158): Config\Globals::setGlobals()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+ 5 APPPATH\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+ 6 SYSTEMPATH\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Routes.php')
+ 7 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 07:49:22 --> Error: Call to undefined function Config\helperGetCookie()
+[Method: GET, Route: /]
+in APPPATH\Config\Globals.php on line 113.
+ 1 APPPATH\Config\Globals.php(158): Config\Globals::setGlobals()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+ 5 APPPATH\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+ 6 SYSTEMPATH\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Routes.php')
+ 7 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 07:49:24 --> Error: Call to undefined function Config\helperGetCookie()
+[Method: GET, Route: /]
+in APPPATH\Config\Globals.php on line 113.
+ 1 APPPATH\Config\Globals.php(158): Config\Globals::setGlobals()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Globals.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+ 5 APPPATH\Config\Routes.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+ 6 SYSTEMPATH\Router\RouteCollection.php(340): require('E:\\xampp\\htdocs\\MintaboPanel\\app\\Config\\Routes.php')
+ 7 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 07:49:41 --> Error: Access to undeclared static property Config\Globals::$darkMode
+[Method: GET, Route: /]
+in APPPATH\Controllers\Web\WebBaseController.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Web\WebBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 08:58:13 --> ErrorException: Undefined variable $activeLanguages
+[Method: GET, Route: admin/navigation]
+in APPPATH\Views\admin\navigation\navigation.php on line 16.
+ 1 APPPATH\Views\admin\navigation\navigation.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activeLanguages', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\admin\\navigation\\navigation.php', 16)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\admin\\navigation\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/navigation/navigation', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(26): view('admin/navigation/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Admin->navigation()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 09:15:50 --> ErrorException: Undefined variable $generalSettings
+[Method: GET, Route: admin/navigation]
+in APPPATH\Views\admin\navigation\navigation.php on line 45.
+ 1 APPPATH\Views\admin\navigation\navigation.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $generalSettings', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\admin\\navigation\\navigation.php', 45)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\admin\\navigation\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/navigation/navigation', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(26): view('admin/navigation/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Admin->navigation()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:36:39 --> ErrorException: Undefined property: App\Controllers\Web\Home::$pageModel
+[Method: GET, Route: dd]
+in APPPATH\Controllers\Web\Home.php on line 42.
+ 1 APPPATH\Controllers\Web\Home.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Web\\Home::$pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Home.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:37:37 --> ErrorException: Undefined property: App\Controllers\Web\Home::$pageModel
+[Method: GET, Route: dd]
+in APPPATH\Controllers\Web\Home.php on line 47.
+ 1 APPPATH\Controllers\Web\Home.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Web\\Home::$pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Home.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:41:32 --> BadMethodCallException: Call to undefined method App\Models\PageModel::getPage
+[Method: GET, Route: dd]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Web\Home.php(48): CodeIgniter\Model->__call('getPage', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:41:45 --> BadMethodCallException: Call to undefined method App\Models\PageModel::getPage
+[Method: GET, Route: dd]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Web\Home.php(48): CodeIgniter\Model->__call('getPage', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:43:53 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(76): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(53): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:44:36 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:44:37 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:44:38 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:44:38 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:44:38 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:51 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:52 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:52 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:53 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:53 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:45:54 --> ErrorException: Undefined variable $title
+[Method: GET, Route: dd]
+in APPPATH\Views\themes\onebook\partials\_header.php on line 8.
+ 1 APPPATH\Views\themes\onebook\partials\_header.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\onebook\\partials\\_header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_header', [], true)
+ 5 APPPATH\Common.php(134): view('themes/onebook/partials/_header')
+ 6 APPPATH\Controllers\Web\Home.php(77): themeView('partials/_header')
+ 7 APPPATH\Controllers\Web\Home.php(54): App\Controllers\Web\Home->error404()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('dd')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:49:02 --> Error: Call to undefined function App\Models\cleanSlug()
+[Method: GET, Route: hosting]
+in APPPATH\Models\PageModel.php on line 87.
+ 1 APPPATH\Controllers\Web\Home.php(50): App\Models\PageModel->getPageByLang('hosting', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('hosting')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:50:41 --> Error: Call to undefined function removeSpecialCharacters()
+[Method: GET, Route: hosting]
+in APPPATH\Common.php on line 90.
+ 1 APPPATH\Models\PageModel.php(87): cleanSlug('hosting')
+ 2 APPPATH\Controllers\Web\Home.php(50): App\Models\PageModel->getPageByLang('hosting', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('hosting')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 10:51:38 --> Error: Call to undefined function removeForbiddenCharacters()
+[Method: GET, Route: hosting]
+in APPPATH\Common.php on line 130.
+ 1 APPPATH\Common.php(90): removeSpecialCharacters('hosting')
+ 2 APPPATH\Models\PageModel.php(87): cleanSlug('hosting')
+ 3 APPPATH\Controllers\Web\Home.php(50): App\Models\PageModel->getPageByLang('hosting', '1')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('hosting')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 11:02:21 --> Error: Call to undefined function App\Controllers\Web\themeView()
+[Method: GET, Route: /]
+in APPPATH\Controllers\Web\Home.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 11:14:39 --> Error: Access to undeclared static property Config\Globals::$darkMode
+[Method: GET, Route: /]
+in APPPATH\Controllers\Web\WebBaseController.php on line 114.
+ 1 APPPATH\Controllers\Web\Home.php(15): App\Controllers\Web\WebBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Web\Home->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 12:18:24 --> Error: Call to undefined function App\Controllers\Web\loadView()
+[Method: GET, Route: hosting/shared]
+in APPPATH\Controllers\Web\Home.php on line 78.
+ 1 APPPATH\Controllers\Web\Home.php(53): App\Controllers\Web\Home->page(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->any('hosting', 'shared')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:28:26 --> Error: Class "App\Controllers\Admin\Globals" not found
+[Method: GET, Route: admin]
+in APPPATH\Controllers\Admin\AdminBaseController.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\AdminBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:28:31 --> Error: Class "App\Controllers\Admin\Globals" not found
+[Method: GET, Route: admin]
+in APPPATH\Controllers\Admin\AdminBaseController.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\AdminBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:29:11 --> Error: Class "App\Controllers\Admin\Globals" not found
+[Method: GET, Route: admin]
+in APPPATH\Controllers\Admin\AdminBaseController.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\AdminBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:45:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "themes/twobook/partials/_header.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('themes/twobook/partials/_header.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/twobook/partials/_header', [], true)
+ 3 APPPATH\Common.php(106): view('themes/twobook/partials/_header', [...])
+ 4 APPPATH\Controllers\Web\Home.php(27): themeView('partials/_header', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:45:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "themes/twobook/partials/_footer.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('themes/twobook/partials/_footer.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/twobook/partials/_footer', [], true)
+ 3 APPPATH\Common.php(108): view('themes/twobook/partials/_footer')
+ 4 APPPATH\Controllers\Web\Home.php(29): themeView('partials/_footer')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:57:28 --> Error: Call to undefined function langBaseByUrl()
+[Method: GET, Route: /]
+in APPPATH\Views\themes\onebook\partials\_footer.php on line 128.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/onebook/partials/_footer', [], true)
+ 4 APPPATH\Common.php(108): view('themes/onebook/partials/_footer')
+ 5 APPPATH\Controllers\Web\Home.php(29): themeView('partials/_footer')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 15:13:31 --> Error: Call to undefined function escSlc()
+[Method: GET, Route: /]
+in APPPATH\Views\themes\twobook\partials\_fonts.php on line 6.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/twobook/partials/_fonts', [], true)
+ 4 APPPATH\Common.php(108): view('themes/twobook/partials/_fonts')
+ 5 APPPATH\Views\themes\twobook\partials\_header.php(12): themeView('partials/_fonts')
+ 6 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\twobook\\partials\\_header.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/twobook/partials/_header', [], true)
+ 9 APPPATH\Common.php(106): view('themes/twobook/partials/_header', [...])
+10 APPPATH\Controllers\Web\Home.php(27): themeView('partials/_header', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 15:14:02 --> Error: Call to undefined function escSlc()
+[Method: GET, Route: /]
+in APPPATH\Views\themes\twobook\partials\_fonts.php on line 6.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/twobook/partials/_fonts', [], true)
+ 4 APPPATH\Common.php(108): view('themes/twobook/partials/_fonts')
+ 5 APPPATH\Views\themes\twobook\partials\_header.php(12): themeView('partials/_fonts')
+ 6 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\twobook\\partials\\_header.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/twobook/partials/_header', [], true)
+ 9 APPPATH\Common.php(106): view('themes/twobook/partials/_header', [...])
+10 APPPATH\Controllers\Web\Home.php(27): themeView('partials/_header', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Home->index()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
