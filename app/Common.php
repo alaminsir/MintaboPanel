@@ -115,7 +115,7 @@ if (!function_exists('langBaseUrl')) {
     function langBaseUrl($route = null)
     {
         if (!empty($route)) {
-            return Globals::$langBaseUrl . '/' . $route;
+            return Globals::$langBaseUrl . '' . $route;
         }
         return Globals::$langBaseUrl;
     }
@@ -171,7 +171,20 @@ if (!function_exists('currentFullURL')) {
         return $currentURL;
     }
 }
-
+//current full url
+if (!function_exists('getCurrentUrl')) {
+    function getCurrentUrl($esc = true)
+    {
+        $currentURL = current_url();
+        if (!empty($_SERVER['QUERY_STRING'])) {
+            $currentURL = $currentURL . "?" . $_SERVER['QUERY_STRING'];
+        }
+        if ($esc) {
+            return esc($currentURL);
+        }
+        return $currentURL;
+    }
+}
 //admin url
 if (!function_exists('adminUrl')) {
     function adminUrl($route = null)
@@ -386,6 +399,38 @@ if (!function_exists('getTransByLabel')) {
         return $model->getTransByLabel($label, $langId);
     }
 }
+
+
+
+//convert URL by language
+if (!function_exists('convertUrlByLanguage')) {
+    function convertUrlByLanguage($language)
+    {
+        $langSegment = Globals::$langSegment;
+        $pageUri = '';
+        $baseUrl = base_url() . '/';
+        if (empty($langSegment)) {
+            $pageUri = str_replace($baseUrl, '', getCurrentUrl());
+        } else {
+            $baseUrl = base_url() . '/' . $langSegment;
+            $pageUri = str_replace($baseUrl, '', getCurrentUrl());
+        }
+        if (!empty($pageUri)) {
+            $pageUri = trim($pageUri, '/');
+        }
+        $newBaseUrl = base_url() . '/';
+        if (Globals::$generalSettings->site_lang != $language->id) {
+            $newBaseUrl = base_url() . '/' . $language->short_form . '/';
+        }
+        return $newBaseUrl . $pageUri;
+    }
+}
+
+
+
+
+
+
 
 //check user permission
 if (!function_exists('checkUserPermission')) {

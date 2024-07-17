@@ -42,8 +42,8 @@
             <div class="col-md-8 nav-top-left">
               <div class="row-align-items-center">
                 <div class="logo">
-                  <a href="https://modesy.codingest.com">
-                    <img src="https://modesy.codingest.com/assets/img/logo.svg" alt="logo">
+                  <a href="<?= langBaseUrl();?>">
+                    <img src="<?= getLogo();?>" alt="logo">
                   </a>
                 </div>
                 <div class="top-search-bar">

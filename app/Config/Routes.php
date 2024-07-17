@@ -25,7 +25,6 @@ include_once 'RoutesStatic.php';
 
 
 // $routes->get('/contact', 'Web\Home::contact');
-$routes->get('/login', 'Web\Auth::index');
 
 $routes->get('/market', 'Market\Home::index');
 $routes->get('/panel', 'Panel\Dashboard::index');
@@ -48,6 +47,31 @@ $routes->get($rtAdmin . '/themes', 'Admin\Admin::themes');
 
 
 
+/*
+ * --------------------------------------------------------------------
+ * Dynamic Routes
+ * --------------------------------------------------------------------
+ */
+
+
+ if (!empty($languages)) {
+    foreach ($languages as $language) {
+        $key = '';
+        if ($generalSettings->site_lang != $language->id) {
+            $key = $language->short_form . '/';
+            $routes->get($language->short_form, 'Web\Home::index');
+        }
+        //auth
+        $routes->get($key . $csrt->authlogin, 'Web\Auth::index');
+        $routes->get($key . $csrt->register, 'Web\Auth::register');
+
+        //contact
+        $routes->get($key . $csrt->contact, 'Web\Page::contact');
+
+
+
+    }
+}
 
 
 
@@ -55,6 +79,10 @@ $routes->get($rtAdmin . '/themes', 'Admin\Admin::themes');
 
 
 
+$routes->get('/hosting', 'Web\Hosting::index');
+
+
+// $routes->get('login', 'Web\Auth::login');
 
 
 
@@ -62,11 +90,6 @@ $routes->get($rtAdmin . '/themes', 'Admin\Admin::themes');
 
 
 
-
-
-
-
-
-
-$routes->get('(:any)/(:any)', 'Web\Home::any/$1/$2');
-$routes->get('(:any)', 'Web\Home::any/$1');
+// $routes->get('(:any)/(:any)', 'Web\Home::any/$1/$2');
+// $routes->get('(:any)', 'Web\Page::any/$1');
+$routes->get('/login', 'Web\Auth::index');

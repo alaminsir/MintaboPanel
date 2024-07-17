@@ -18,7 +18,7 @@
             <div class="col-12">
               <div class="search-container">
                 <div class="search">
-                  <form action="https://modesy.codingest.com/help-center/search" method="get">
+                  <form action="#" method="get">
                     <input type="text" name="q" class="form-control form-input" placeholder="Search" required="">
                     <button type="submit">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#222222" viewBox="0 0 16 16" class="mds-svg-icon">

@@ -3,8 +3,13 @@
         <div class="row">
             <div class="col-6 col-left">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="http://localhost/modesy/contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="http://localhost/modesy/blog" class="nav-link">Blog</a></li>
+                <?php if (!empty($baseMenuLinks)): 
+                    foreach ($baseMenuLinks as $item):
+                        if ($item->item_visibility == 1 && $item->item_location == "top"): ?>
+                    <li class="nav-item"><a href="<?= generateMenuItemURL($item, $baseCategories); ?>" class="nav-link"><?= esc($item->item_name); ?></a></li>
+                    <?php endif;
+                        endforeach;
+                        endif; ?>
                     <li class="nav-item dropdown top-menu-dropdown">
                         <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown"> <img
                                 src="http://localhost/modesy/uploads/blocks/flag_eng.jpg" class="flag">Contact&nbsp;<i
@@ -27,33 +32,28 @@
             <div class="col-6 col-right">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="javascript:void(0)" data-toggle="modal" data-target="#locationModal"
-                            class="nav-link btn-modal-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16"
-                                fill="#888888" class="mds-svg-icon">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z">
-                                </path>
-                            </svg>
-                            Location</a>
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#locationModal" class="nav-link btn-modal-location">Location</a>
                     </li>
+                    <?php if ($generalSettings->multilingual_system == 1 && countItems($activeLanguages) > 1): ?>
                     <li class="nav-item dropdown top-menu-dropdown">
-                        <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown"> <img
-                                src="http://localhost/modesy/uploads/blocks/flag_eng.jpg" class="flag">English&nbsp;<i
-                                class="icon-arrow-down"></i></a>
+                        <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                             <img src="<?= base_url($activeLang->flag_path); ?>" class="flag"><?= esc($activeLang->name); ?>&nbsp;<i class="icon-arrow-down"></i></a>
                         <ul class="dropdown-menu dropdown-menu-lang">
-                            <li>
-                                <a href="http://localhost/modesy/" class="dropdown-item selected"><img
-                                        src="http://localhost/modesy/uploads/blocks/flag_eng.jpg"
-                                        class="flag">English</a>
+                        <?php foreach ($activeLanguages as $language): 
+                        $langURL = base_url($language->short_form);
+                        if ($language->id == $generalSettings->site_lang):
+                        $langURL = base_url();
+                        endif; ?>
+                        <li>
+                          
+                                <a href="<?= $langURL; ?>" class="dropdown-item <?= $language->id == $activeLang->id ? 'selected' : ''; ?>">
+                                    <img src="<?= base_url($language->flag_path); ?>" class="flag"><?= esc($language->name); ?></a>
                             </li>
-                            <li>
-                                <a href="http://localhost/modesy/bn/" class="dropdown-item "><img
-                                        src="http://localhost/modesy/uploads/blocks/flag_6692107e54b0a.png"
-                                        class="flag">Bengali</a>
-                            </li>
+                            <?php endforeach; ?>
                         </ul>
                     </li>
+                    <?php endif;?>
+                    <?php if(authCheck()):?>
                     <li class="nav-item dropdown profile-dropdown p-r-0">
                         <a class="nav-link dropdown-toggle a-profile" data-toggle="dropdown" href="javascript:void(0)"
                             aria-expanded="false"><img
@@ -116,6 +116,11 @@
                             </li>
                         </ul>
                     </li>
+                    <?php else: 
+                    if($generalSettings->registration_system == 1):?>
+                    <li class="nav-item"><a href="<?= generateURL('authlogin'); ?>" class="nav-link"><?= trans("login"); ?></a><span>&nbsp;/&nbsp;</span><a href="<?= generateURL('register'); ?>" class="nav-link"><?= trans("register"); ?></a></li>
+                    <?php endif;?>
+                    <?php endif;?>
                 </ul>
             </div>
         </div>

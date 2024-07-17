@@ -178,15 +178,27 @@ class PageModel extends BaseModel
     //get menu links
     // public function getMenuLinks($langId)
     // {
-    //     return $this->builder->select('id, title, slug, page_order, location, page_default_name')->where('lang_id', clrNum($langId))->where('visibility', 1)->orderBy('page_order')->get()->getResult();
+    //     return $this->builder->select('id, title, slug, page_order, location, page_default_name')->where('lang_id', $langId)->where('visibility', 1)->orderBy('page_order')->get()->getResult();
     // }
     //get menu links
     public function getMenuLinks($langId)
     {
-        $sql = "SELECT * FROM (
-        (SELECT pages.id AS item_id, pages.lang_id AS item_lang_id, pages.title AS item_name, pages.slug AS item_slug, pages.page_order AS item_order, pages.location AS item_location, 'page' 
-        AS item_type, pages.link AS item_link, pages.parent_id AS item_parent_id, pages.visibility AS item_visibility FROM pages WHERE pages.lang_id = ?)) AS menu_items ORDER BY item_order";
-        return $this->db->query($sql, array($langId, $langId))->getResult();
+        $sql = "SELECT 
+                pages.id AS item_id, 
+                pages.lang_id AS item_lang_id, 
+                pages.title AS item_name, 
+                pages.slug AS item_slug, 
+                pages.page_order AS item_order, 
+                pages.location AS item_location, 
+                'page' AS item_type, 
+                pages.link AS item_link, 
+                pages.parent_id AS item_parent_id, 
+                pages.visibility AS item_visibility 
+            FROM pages 
+            WHERE pages.lang_id = ? 
+            ORDER BY pages.page_order";
+        
+        return $this->db->query($sql, array($langId))->getResult();
     }
     //get menu links old
     // public function getMenuLinks($langId)

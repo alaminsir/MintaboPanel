@@ -2,6 +2,12 @@
 
 namespace App\Controllers\Web;
 
+use App\Models\PageModel;
+
+
+
+
+
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -44,21 +50,20 @@ abstract class WebBaseController extends Controller
      * Be sure to declare properties for any property fetch you initialized.
      * The creation of dynamic property is deprecated in PHP 8.2.
      */
-    // protected $session;
     public $session;
-    // public $settingsModel;
+    public $settingsModel;
     // public $commonModel;
     // public $postModel;
-    // public $generalSettings;
-    // public $settings;
-    // public $activeLanguages;
+    public $generalSettings;
+    public $settings;
+    public $activeLanguages;
     public $activeTheme;
     public $activeLang;
-    // public $activeFonts;
+    public $activeFonts;
     public $rtl;
     public $darkMode;
     // public $widgets;
-    // public $categories;
+    public $categories;
     // public $latestCategoryPosts;
     // public $adSpaces;
 
@@ -115,15 +120,15 @@ abstract class WebBaseController extends Controller
 
 
 
+    
+
         //menu links
-        // $menuLinks = getCachedData('menu_links');
-        // if (empty($menuLinks)) {
-        //     $pageModel = new PageModel();
-        //     $menuLinks = $pageModel->getMenuLinks($this->activeLang->id);
-        //     setCacheData('menu_links', $menuLinks);
-        // }
-
-
+        $menuLinks = getCachedData('menu_links');
+        if (empty($menuLinks)) {
+            $pageModel = new PageModel();
+            $menuLinks = $pageModel->getMenuLinks($this->activeLang->id);
+            setCacheData('menu_links', $menuLinks);
+        }
 
 
 
@@ -141,15 +146,15 @@ abstract class WebBaseController extends Controller
             'assetsPath' => 'assets/' . getThemePath(),
             'activeTheme' => $this->activeTheme,
             'activeLang' => $this->activeLang,
-            // 'generalSettings' => $this->generalSettings,
+            'generalSettings' => $this->generalSettings,
             'baseSettings' => $this->settings,
-            // 'activeLanguages' => $this->activeLanguages,
+            'activeLanguages' => $this->activeLanguages,
             'rtl' => $this->rtl,
             'darkMode' => $this->darkMode,
-            // 'activeFonts' => $this->activeFonts,
-            // 'baseMenuLinks' => $menuLinks,
+            'activeFonts' => $this->activeFonts,
+            'baseMenuLinks' => $menuLinks,
             // 'baseWidgets' => $this->widgets,
-            // 'baseCategories' => $this->categories,
+            'baseCategories' => $this->categories,
             // 'baseLatestCategoryPosts' => $this->latestCategoryPosts,
             // 'adSpaces' => $this->adSpaces
     ]);

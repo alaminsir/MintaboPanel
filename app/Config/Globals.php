@@ -50,6 +50,8 @@ class Globals extends BaseConfig
             }
         }
 
+        // var_dump(self::$customRoutes);
+
 
 
         //set languages
@@ -90,8 +92,57 @@ class Globals extends BaseConfig
         self::$settings = self::$db->table('settings')->where('lang_id', self::$activeLang->id)->get()->getRow();
 
 
-
-
+        //authentication
+        if (!empty($session->get('min_ses_id')) && !empty($session->get('min_ses_role_id')) && !empty($session->get('min_ses_pass'))) {
+           
+            $user = self::$db->table('users')->join('roles_permissions', 'roles_permissions.id = users.role_id')
+                ->where('users.id', cleanNumber($session->get('min_ses_id')))->select('users.*, role_name, permissions, is_super_admin, is_admin, is_vendor, is_member')->get()->getRow();
+           
+                if (!empty($user) && $user->banned != 1 && md5($user->password ?? '') == $session->get('min_ses_pass')) {
+                self::$authCheck = true;
+                self::$authUser = $user;
+            }
+        }
+        //Chatgpt code
+        if (!empty($session->get('min_ses_id')) && !empty($session->get('min_ses_role_id')) && !empty($session->get('min_ses_pass'))) {
+            $userId = cleanNumber($session->get('min_ses_id'));
+            $roleId = $session->get('min_ses_role_id');
+            $sessionPassword = $session->get('min_ses_pass');
+            
+            // Determine if the user is an admin or regular user
+            if ($roleId === 'admin') {
+                $user = self::$db->table('admins')
+                    ->where('id', $userId)
+                    ->select('id, username, email, password, role, banned')
+                    ->get()
+                    ->getRow();
+            } else {
+                $user = self::$db->table('users')
+                    ->join('roles_permissions', 'roles_permissions.id = users.role_id')
+                    ->where('users.id', $userId)
+                    ->select('users.*, role_name, permissions, is_super_admin, is_admin, is_vendor, is_member')
+                    ->get()
+                    ->getRow();
+            }
+        
+                if (!empty($user)) {
+                    if ($user->banned != 1 && md5($user->password ?? '') == $sessionPassword) {
+                        self::$authCheck = true;
+                        self::$authUser = $user;
+                    } 
+                }
+        
+        }
+                //authentication varient
+                if (!empty($session->get('min_ses_id')) && !empty($session->get('min_ses_role')) && !empty($session->get('vr_ses_pass'))) {
+                    $user = self::$db->table('users')->where('id', cleanNumber($session->get('vr_ses_id')))->get()->getRow();
+                    if (!empty($user) && md5($user->password ?? '') == $session->get('min_ses_pass')) {
+                        if ($user->status == 1) {
+                            self::$authCheck = true;
+                            self::$authUser = $user;
+                        }
+                    }
+                }
 
 
 
