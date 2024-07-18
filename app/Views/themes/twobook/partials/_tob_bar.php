@@ -58,7 +58,7 @@
                         <a class="nav-link dropdown-toggle a-profile" data-toggle="dropdown" href="javascript:void(0)"
                             aria-expanded="false"><img
                                 src="http://localhost/modesy/uploads/profile/avatar_669220c9ecca49-70342542.webp"
-                                alt="MaP Hunter">MaP Hunter<i class="icon-arrow-down"></i><span
+                                alt="MaP Hunter"><?= esc(user()->username); ?><i class="icon-arrow-down"></i><span
                                 class="message-notification">1</span></a>
                         <ul class="dropdown-menu" style="">
                             <li><a href="http://localhost/modesy/admin"><i class="icon-admin"></i>Admin Panel</a></li>
@@ -106,13 +106,11 @@
                             <li><a href="http://localhost/modesy/settings/edit-profile"><i
                                         class="icon-settings"></i>Settings</a></li>
                             <li>
-                                <form action="http://localhost/modesy/logout" method="post" class="form-logout">
-                                    <input type="hidden" name="csrf_token"
-                                        value="d9a2e10b388a3381406aca93f3f63164"><input type="hidden" name="back_url"
-                                        value="http://localhost/modesy/">
-                                    <button type="submit" class="btn-logout"><i
-                                            class="icon-logout"></i>&nbsp;&nbsp;Logout</button>
-                                    <input type="hidden" name="sysLangId" value="1"></form>
+                                <form action="<?= base_url('logout'); ?>" method="post" class="form-logout">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="back_url" value="<?= getCurrentUrl(); ?>">
+                                    <button type="submit" class="btn-logout"><i class="icon-logout"></i>&nbsp;&nbsp;<?= trans("logout"); ?></button>
+                                </form>
                             </li>
                         </ul>
                     </li>

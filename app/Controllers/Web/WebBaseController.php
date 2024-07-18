@@ -135,7 +135,7 @@ abstract class WebBaseController extends Controller
 
 
 
-
+        updateLastSeen();
 
 
             //view variables

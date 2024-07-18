@@ -2344,3 +2344,37 @@ if (!function_exists('isBot')) {
         return false;
     }
 }
+
+//set success message
+if (!function_exists('setSuccessMessage')) {
+    function setSuccessMessage($message)
+    {
+        if (!empty($message)) {
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', $message);
+        }
+    }
+}
+
+//set error message
+if (!function_exists('setErrorMessage')) {
+    function setErrorMessage($message)
+    {
+        if (!empty($message)) {
+            $session = \Config\Services::session();
+            $session->setFlashdata('error', $message);
+        }
+    }
+}
+
+
+//reset flash data
+if (!function_exists('resetFlashData')) {
+    function resetFlashData()
+    {
+        $session = \Config\Services::session();
+        $session->setFlashdata('errors', '');
+        $session->setFlashdata('error', '');
+        $session->setFlashdata('success', '');
+    }
+}

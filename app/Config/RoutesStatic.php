@@ -5,4 +5,5 @@
  * --------------------------------------------------------------------
  */
 
- 
+$routes->post('login-post', 'Web\Auth::loginPost');
+$routes->post('logout', 'Web\Auth::logout');

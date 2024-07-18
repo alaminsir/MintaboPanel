@@ -123,4 +123,12 @@ class Session extends BaseConfig
      * seconds.
      */
     public int $lockMaxRetries = 300;
+
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->cookieName = !empty(getenv('cookie.prefix')) ? getenv('cookie.prefix') . 'session' : 'min_session';
+    }
 }

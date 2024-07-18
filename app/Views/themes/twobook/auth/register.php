@@ -3,24 +3,6 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
-            padding-top: 20px;
-        }
-        .breadcrumb {
-            background-color: #fff;
-            border-radius: 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 10px 15px;
-        }
-        .breadcrumb-item + .breadcrumb-item::before {
-            content: '>';
-            color: #ccc;
-            margin: 0 5px;
-        }
-        .breadcrumb-item.active {
-            color: #555;
-        }
-        .breadcrumb-item.active a {
-            color: #555 !important;
         }
     </style>
 <div id="wrapper">
@@ -43,7 +25,7 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- Register form title -->
-                        <h1 class="title">Register</h1>
+                        <h1 class="title"><?= trans("register"); ?></h1>
                         
                         <!-- Registration form -->
                         <form action="#" method="post" id="form_validate" class="validate_terms" novalidate>
@@ -53,11 +35,13 @@
                             <!-- Social login section -->
                             <div class="social-login">
                                 <!-- Placeholder for social login buttons or integration -->
+                                <?= themeView('auth/_social_login', ['orText' => trans("register_with_email")]); ?>
                             </div>
 
                             <!-- Registration result or error display -->
                             <div id="result-register">
                                 <!-- Placeholder for registration result/error message -->
+                                <?= themeView('partials/_messages'); ?>
                             </div>
 
                             <!-- Spinner for loading indication -->

@@ -11,7 +11,13 @@ use App\Models\AuthModel;
 
 class Auth extends WebBaseController
 {
+    public $authModel;
 
+    public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
+    {
+        parent::initController($request, $response, $logger);
+        $this->authModel = new AuthModel();
+    }
 
     public function index()
     {
@@ -33,19 +39,30 @@ class Auth extends WebBaseController
 
     public function loginPost()
      {
+        //check auth
         if (authCheck()) {
             return redirect()->to(langBaseUrl());
         }
         $val = \Config\Services::validation();
-        $val->setRule('email', trans("email"), 'required|max_length[255]');
+        $val->setRule('email', trans("email_address"), 'required|max_length[255]');
         $val->setRule('password', trans("password"), 'required|max_length[255]');
         if (!$this->validate(getValRules($val))) {
             $this->session->setFlashdata('errors', $val->getErrors());
-            echo loadView('partials/_messages');
+            // echo themeView('partials/_messages');
+            // echo themeView('partials/_messages');
         } else {
-            $model = new AuthModel();
-            $result = $model->login();
-        }        
+            if ($this->authModel->login()) {
+                return redirect()->to(langBaseUrl());
+                // echo json_encode(['result' => 1]);
+            } else {
+                $data = [
+                    'result' => 0,
+                    'errorMessage' => view('partials/_messages')
+                ];
+                echo json_encode($data);
+            }
+            resetFlashData();
+        }   
     }
     /**
      * Register
@@ -67,7 +84,14 @@ class Auth extends WebBaseController
         echo themeView('partials/_footer');
     }
 
-
+    /**
+     * Logout
+     */
+    public function logout()
+    {
+        $this->authModel->logout();
+        redirectToBackUrl();
+    }
 
 
 

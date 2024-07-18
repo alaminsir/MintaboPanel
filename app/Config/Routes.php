@@ -37,8 +37,8 @@ $routes->get('/panel', 'Panel\Dashboard::index');
  * --------------------------------------------------------------------
  */
 $routes->get($rtAdmin, 'Admin\Admin::index');
-$routes->get($rtAdmin . '/login', 'Admin\Auth::index'); 
-// $routes->post($rtAdmin . '/login-post', 'Admin\Auth::adminLoginpost');
+$routes->get($rtAdmin . '/adminlogin', 'Admin\Auth::index'); 
+$routes->post($rtAdmin . '/login-post', 'Admin\Auth::loginPost');
 //navigation
 $routes->get($rtAdmin . '/navigation', 'Admin\Admin::navigation');
 $routes->get($rtAdmin . '/themes', 'Admin\Admin::themes');
@@ -67,8 +67,12 @@ $routes->get($rtAdmin . '/themes', 'Admin\Admin::themes');
 
         //contact
         $routes->get($key . $csrt->contact, 'Web\Page::contact');
-
-
+        //hosting 
+        
+        if ($generalSettings->site_lang != $language->id) {
+            // $routes->get($key . '(:any)/(:any)', 'HomeController::subCategory/$1/$2');
+            // $routes->get($key . '(:any)', 'HomeController::any/$1');
+        }
 
     }
 }

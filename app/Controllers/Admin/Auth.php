@@ -2,10 +2,15 @@
 
 namespace App\Controllers\Admin;
 
+use App\Models\Admin\AuthModel;
+
 class Auth extends AdminBaseController
 {
     public function index()
     {
+        if (authCheck()) {
+            return redirect()->to(langBaseUrl());
+        }
         // $data['title'] = trans("navigation");
 
 
@@ -14,5 +19,18 @@ class Auth extends AdminBaseController
         // . view('admin/includes/_footer');
         // echo "Admin Login Page";
         return view('admin/login');
+    }
+
+    public function loginPost()
+     {
+        return redirect()->to(adminUrl());  
+    }
+    /**
+     * Logout
+     */
+    public function logout()
+    {
+        $this->authModel->logout();
+        redirectToBackUrl();
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Admin;
 
 use Codeigniter\Model;
 
-class AuthModel extends BaseModel
+class AuthModel extends AdminBaseModel
 {
     protected $builder;
     protected $builderRoles;
@@ -12,7 +12,7 @@ class AuthModel extends BaseModel
     public function __construct()
     {
         parent::__construct();
-        $this->builder = $this->db->table('users');
+        $this->builder = $this->db->table('admins');
         $this->builderRoles = $this->db->table('roles_permissions');
     }
 

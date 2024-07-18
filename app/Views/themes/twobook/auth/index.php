@@ -3,7 +3,6 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
-            padding-top: 20px;
         }
     </style>
 <div id="wrapper">
@@ -20,19 +19,19 @@
             </div>
         </div>
 
-        <!-- Registration form container -->
+        <!-- Login form container -->
         <div class="auth-container">
             <div class="auth-box">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="title">Login</h1>
-                        <!-- Registration form -->
-                        <form action="#" method="post" id="form_validate" class="validate_terms" novalidate>
-                            <input type="hidden" name="csrf_token" value="8597389a1b91e065f1f39e18cf943e6d">
-
+                        <h1 class="title"><?= trans("login"); ?></h1>
+                        <!-- Login form -->
+                        <form action="<?= base_url('login-post'); ?>" method="post" id="form_validate">
+                        <?= csrf_field(); ?>
                             <!-- Social login buttons (if applicable) -->
                             <div class="social-login">
                                 <!-- Placeholder for social login buttons -->
+                                <?= themeView('auth/_social_login', ["orText" => trans("login_with_email")]); ?>
                             </div>
 
                             <!-- Result or error message display -->
@@ -49,35 +48,27 @@
 
                             <!-- Email input field -->
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control auth-form-input" placeholder="Email Address" value="" maxlength="255" required>
+                                <input type="email" name="email" class="form-control auth-form-input" placeholder="<?= trans("email_address"); ?>" value="" maxlength="255" required>
                             </div>
 
                             <!-- Password input field -->
                             <div class="form-group">
-                                <input type="password" name="password" class="form-control auth-form-input" placeholder="Password" value="" minlength="4" maxlength="255" required>
+                                <input type="password" name="password" class="form-control auth-form-input" placeholder="<?= trans("password"); ?>" value="" minlength="4" maxlength="255" required>
+                            </div>
+                            <!-- Forgate Password input field -->
+                            <div class="form-group text-right">
+                                <a href="<?= generateUrl("forgot_password"); ?>" class="link-forgot-password"><?= trans("forgot_password"); ?></a>
                             </div>
 
-                            <!-- Terms and conditions checkbox -->
-                            <div class="form-group m-t-5 m-b-15">
-                                <div class="custom-control custom-checkbox custom-control-validate-input">
-                                    <input type="checkbox" class="custom-control-input" name="terms" id="checkbox_terms" required>
-                                    <label for="checkbox_terms" class="custom-control-label">
-                                        I have read and agree to the&nbsp;
-                                        <a href="#" class="link-terms" target="_blank"><strong>Terms &amp; Conditions</strong></a>
-                                    </label>
-                                </div>
-                            </div>
 
                             <!-- Register button -->
                             <div class="form-group">
-                                <button type="submit" class="btn btn-custom btn-block">Login</button>
+                                <button type="submit" class="btn btn-custom btn-block"><?= trans("login"); ?></button>
                             </div>
 
                             <!-- Login link -->
-                            <p class="p-social-media m-0 m-t-15">
-                                Have an account?&nbsp;
-                                <a href="<?= generateUrl('register'); ?>" class="link font-600">Register</a>
-                            </p>
+                            <p class="p-social-media m-0 m-t-5"><?= trans("dont_have_account"); ?>&nbsp;<a href="<?= generateUrl("register"); ?>" class="link font-600"><?= trans("register"); ?></a></p>
+
 
                             <!-- Hidden input for system language ID -->
                             <input type="hidden" name="sysLangId" value="1">
