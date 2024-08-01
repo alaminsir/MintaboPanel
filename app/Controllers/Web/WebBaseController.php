@@ -5,9 +5,6 @@ namespace App\Controllers\Web;
 use App\Models\PageModel;
 
 
-
-
-
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -153,6 +150,7 @@ abstract class WebBaseController extends Controller
             'darkMode' => $this->darkMode,
             'activeFonts' => $this->activeFonts,
             'baseMenuLinks' => $menuLinks,
+            'MenuLinks' => $menuLinks,
             // 'baseWidgets' => $this->widgets,
             'baseCategories' => $this->categories,
             // 'baseLatestCategoryPosts' => $this->latestCategoryPosts,

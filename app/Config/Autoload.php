@@ -62,7 +62,9 @@ class Autoload extends AutoloadConfig
      * @var array<string, string>
      */
     public $classmap = [
-        'Globals' => APPPATH . 'Config/Globals.php'
+        'AdminPanel' => APPPATH . 'Config/AdminPanel.php',
+        'Market' => APPPATH . 'Config/Market.php',
+        'Globals' => APPPATH . 'Config/Globals.php',
     ];
 
     /**

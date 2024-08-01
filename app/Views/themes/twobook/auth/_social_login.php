@@ -1,4 +1,4 @@
-<?php if (empty($generalSettings->facebook_app_id)): ?>
+<?php if (!empty($generalSettings->facebook_app_id)): ?>
     <a href="<?= base_url('connect-with-facebook'); ?>" class="btn btn-social btn-social-facebook">
         <svg width="24" height="24" viewBox="0 0 14222 14222">
             <circle cx="7111" cy="7112" r="7111" fill="#ffffff"/>
@@ -8,7 +8,7 @@
     </a>
 <?php endif;
 
-if (empty($generalSettings->google_client_id)): ?>
+if (!empty($generalSettings->google_client_id)): ?>
     <a href="<?= base_url('connect-with-google'); ?>" class="btn btn-social btn-social-google">
         <svg width="24" height="24" viewBox="0 0 128 128">
             <rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="128" width="128"/>
@@ -20,7 +20,7 @@ if (empty($generalSettings->google_client_id)): ?>
         <span><?= trans("connect_with_google"); ?></span>
     </a>
 <?php endif;
-if (empty($generalSettings->vk_app_id)): ?>
+if (!empty($generalSettings->vk_app_id)): ?>
     <a href="<?= base_url('connect-with-vk'); ?>" class="btn btn-social btn-social-vk">
         <svg width="24" height="24" viewBox="0 0 24 24">
             <path d="M20,13c.24-.45,1.09-1.74,1.73-2.7C23.65,7.46,24,6.86,24,6.5a.5.5,0,0,0-.5-.5H19a.5.5,0,0,0-.49.41c-.25,1.38-3.49,5.34-4,5.59-.21,0-.5-.52-.5-1.5V6.28a1.18,1.18,0,0,0-.24-.93C13.43,5,12.92,5,11.5,5,8.92,5,8,5.77,8,6.5A.46.46,0,0,0,8.45,7S9,7.36,9,9.5A14.61,14.61,0,0,1,8.87,12C7.6,11.77,5.84,8.6,5,6.32A.5.5,0,0,0,4.5,6H.5A.5.5,0,0,0,0,6.59C.56,9.61,6.91,19,11,19h2c1.06,0,1.14-1.15,1.2-1.91s.11-1.09.3-1.09c.62,0,1.89,1.1,2.72,1.82S18.59,19,19,19h2.5c1.29,0,2.5,0,2.5-1,0-.38-.33-.82-2.23-3C21.14,14.31,20.29,13.36,20,13Z" style="fill:#ffffff"/>
@@ -28,7 +28,7 @@ if (empty($generalSettings->vk_app_id)): ?>
         <span><?= trans("connect_with_vk"); ?></span>
     </a>
 <?php endif;
-if (empty($generalSettings->facebook_app_id) || !empty($generalSettings->google_client_id) || !empty($generalSettings->vk_app_id)): ?>
+if (!empty($generalSettings->facebook_app_id) || !empty($generalSettings->google_client_id) || !empty($generalSettings->vk_app_id)): ?>
     <div class="form-group m-b-0">
         <p class="p-social-media"><?= $orText; ?></p>
     </div>

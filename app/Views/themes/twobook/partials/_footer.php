@@ -11,20 +11,37 @@
                                 </div>
                             </div>
                             <div class="row-custom">
-                                <div class="footer-about"></div>
+                                <div class="footer-about">
+                                <?= $baseSettings->about_footer; ?>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-3 footer-widget">
                             <div class="nav-footer">
                                 <div class="row-custom">
-                                    <h4 class="footer-title">Quick Links</h4>
+                                    <h4 class="footer-title"><?= trans("footer_quick_links"); ?></h4>
                                 </div>
                                 <div class="row-custom">
                                     <ul>
-                                        <li><a href="http://localhost/modesy">Home</a></li>
-                                        <li><a href="http://localhost/modesy/shops">Shops</a></li>
-                                        <li><a href="http://localhost/modesy/hosting">Hosting</a></li>
-                                        <li><a href="http://localhost/modesy/help-center">Help Center</a></li>
+                                <?php if (!empty($baseMenuLinks)): 
+                                foreach ($baseMenuLinks as $item):
+                                    if ($item->item_visibility == 1 && $item->item_location == "information"): ?>
+                                <li class="nav-item"><a href="<?= generateMenuItemURL($item, $baseCategories); ?>" class="nav-link"><?= esc($item->item_name); ?></a></li>
+                                <?php endif;
+                                    endforeach;
+                                    endif; ?>
+                                    <?php if (!empty($menuLinks)):
+                                            foreach ($menuLinks as $menuLink):
+                                                if ($menuLink->location == 'quick_links'):
+                                                    $itemLink = generateMenuItemUrl($menuLink);
+                                                    if (!empty($menuLink->page_default_name)):
+                                                        $itemLink = generateUrl($menuLink->page_default_name);
+                                                    endif; ?>
+                                                    <li><a href="<?= $itemLink; ?>"><?= esc($menuLink->title); ?></a></li>
+                                                <?php endif;
+                                            endforeach;
+                                        endif; ?>
+                                        <li><a href="<?= generateUrl('help_center'); ?>"><?= trans("help_center"); ?></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -32,47 +49,53 @@
                         <div class="col-12 col-md-3 footer-widget">
                             <div class="nav-footer">
                                 <div class="row-custom">
-                                    <h4 class="footer-title">Information</h4>
+                                    <h4 class="footer-title"><?= trans("footer_information"); ?></h4>
                                 </div>
                                 <div class="row-custom">
                                     <ul>
-                                        <li><a href="http://localhost/modesy/terms-conditions">Terms &amp;
-                                                Conditions</a></li>
+                                    <?php if (!empty($menuLinks)):
+                                            foreach ($menuLinks as $menuLink):
+                                                if ($menuLink->location == 'information'):
+                                                    $itemLink = generateMenuItemUrl($menuLink);
+                                                    if (!empty($menuLink->page_default_name)):
+                                                        $itemLink = generateUrl($menuLink->page_default_name);
+                                                    endif; ?>
+                                                    <li><a href="<?= $itemLink; ?>"><?= esc($menuLink->title); ?></a></li>
+                                                <?php endif;
+                                            endforeach;
+                                        endif; ?>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-3 footer-widget">
-                            <div class="row">
+                        <div class="row">
                                 <div class="col-12">
-                                    <h4 class="footer-title">Follow Us</h4>
+                                    <h4 class="footer-title"><?= trans("follow_us"); ?></h4>
                                     <div class="footer-social-links">
-                                        <ul>
-                                            <li><a href="http://localhost/modesy/rss-feeds" class="rss"
-                                                    target="_blank"><i class="icon-rss"></i></a></li>
-                                        </ul>
+                                        <?= themeView('partials/_social_links', ['showRSS' => true]); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="newsletter">
-                                        <div class="widget-newsletter">
-                                            <h4 class="footer-title">Newsletter</h4>
-                                            <form id="form_newsletter_footer" class="form-newsletter">
-                                                <div class="newsletter">
-                                                    <input type="email" name="email" class="newsletter-input"
-                                                        maxlength="199" placeholder="Enter your email" required="">
-                                                    <button type="submit" name="submit" value="form"
-                                                        class="newsletter-button">Subscribe</button>
-                                                </div>
-                                                <input type="text" name="url">
-                                                <div id="form_newsletter_response"></div>
-                                            </form>
+                            <?php if ($generalSettings->newsletter_status == 1): ?>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="newsletter">
+                                            <div class="widget-newsletter">
+                                                <h4 class="footer-title"><?= trans("newsletter"); ?></h4>
+                                                <form id="form_newsletter_footer" class="form-newsletter">
+                                                    <div class="newsletter">
+                                                        <input type="email" name="email" class="newsletter-input" maxlength="199" placeholder="<?= trans("enter_email"); ?>" required>
+                                                        <button type="submit" name="submit" value="form" class="newsletter-button"><?= trans("subscribe"); ?></button>
+                                                    </div>
+                                                    <input type="text" name="url">
+                                                    <div id="form_newsletter_response"></div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -83,7 +106,7 @@
         <div class="row">
             <div class="footer-bottom">
                 <div class="container">
-                    <div class="copyright">Copyright 2023 Modesy - All Rights Reserved.</div>
+                    <div class="copyright"> <?= esc($baseSettings->copyright); ?></div>
                     <div class="footer-payment-icons">
                         <img src="http://localhost/modesy/assets/img/payment/visa.svg"
                             data-src="http://localhost/modesy/assets/img/payment/visa.svg" alt="visa"

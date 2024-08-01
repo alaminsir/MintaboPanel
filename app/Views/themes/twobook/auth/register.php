@@ -28,9 +28,9 @@
                         <h1 class="title"><?= trans("register"); ?></h1>
                         
                         <!-- Registration form -->
-                        <form action="#" method="post" id="form_validate" class="validate_terms" novalidate>
+                        <form action="<?= base_url('register-post'); ?>" method="post" id="form_validate" class="validate_terms" novalidate>
                             <!-- CSRF token -->
-                            <input type="hidden" name="csrf_token" value="8597389a1b91e065f1f39e18cf943e6d">
+                            <?= csrf_field(); ?>
 
                             <!-- Social login section -->
                             <div class="social-login">

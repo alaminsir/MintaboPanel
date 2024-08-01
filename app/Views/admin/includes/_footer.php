@@ -4,10 +4,10 @@
     <div class="pull-right hidden-xs">
         <b style="font-weight: 600;">Mintabo</b> 1.0
     </div>
-    <strong style="font-weight: 600;">Copyright 2023 Modesy - All Rights Reserved.</strong>
+    <strong style="font-weight: 600;"><?= esc($baseSettings->copyright); ?></strong>
 </footer>
 </div>
-<script src="http://localhost/modesy/assets/admin/js/jquery-ui.min.js"></script>
+<script src="<?= base_url('assets/admin/js/jquery-ui.min.js'); ?>"></script>
 <script>
     $.widget.bridge('uibutton', $.ui.button);
     var thousands_separator = '.';
@@ -46,7 +46,7 @@
             menubar: menuBar,
             plugins: 'advlist autolink lists link image charmap preview searchreplace visualblocks code codesample fullscreen insertdatetime media table',
             toolbar: toolbar,
-            content_css: ['http://localhost/modesy/assets/vendor/tinymce/editor_content.css'],
+            content_css: ['<?= base_url('assets/vendor/tinymce/editor_content.css'); ?>'],
         });
     }
 

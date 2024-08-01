@@ -1,0 +1,117 @@
+INFO - 2024-07-31 17:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-07-31 23:01:49 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/themes/onebook/fonts/themify.woff]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'C:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'themes', 'onebook', 'fonts', 'themify.woff')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-31 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-07-31 23:01:49 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/themes/onebook/fonts/fa-solid-900.woff2]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'C:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'themes', 'onebook', 'fonts', 'fa-solid-900.woff2')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-31 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-07-31 23:01:49 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/themes/onebook/fonts/fa-regular-400.woff2]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'C:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'themes', 'onebook', 'fonts', 'fa-regular-400.woff2')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-31 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-07-31 23:01:49 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/themes/onebook/fonts/fa-solid-900.woff]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'C:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'themes', 'onebook', 'fonts', 'fa-solid-900.woff')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-31 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-07-31 23:01:49 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/themes/onebook/fonts/themify.ttf]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'C:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'themes', 'onebook', 'fonts', 'themify.ttf')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-31 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-07-31 23:01:49 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/themes/onebook/fonts/fa-regular-400.woff]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'C:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'themes', 'onebook', 'fonts', 'fa-regular-400.woff')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-31 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-07-31 23:01:49 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/themes/onebook/fonts/fa-solid-900.ttf]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'C:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'themes', 'onebook', 'fonts', 'fa-solid-900.ttf')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-31 17:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2024-07-31 23:01:49 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/themes/onebook/fonts/fa-regular-400.ttf]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'C:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'themes', 'onebook', 'fonts', 'fa-regular-400.ttf')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-31 18:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 18:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2024-07-31 19:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.

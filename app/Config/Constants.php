@@ -92,3 +92,9 @@ define('EVENT_PRIORITY_NORMAL', 100);
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_HIGH instead.
  */
 define('EVENT_PRIORITY_HIGH', 10);
+
+defined('IMG_BASE64_1x1')      		 OR define('IMG_BASE64_1x1', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+defined('IMG_BG_PRODUCT_SMALL')      OR define('IMG_BG_PRODUCT_SMALL', 'assets/img/img_bg_product_small.png');
+defined('IMG_BG_BLOG_SMALL')      	 OR define('IMG_BG_BLOG_SMALL', 'assets/img/img_bg_blog_small.jpg');
+defined('IMG_BG_PRODUCT_SLIDER')     OR define('IMG_BG_PRODUCT_SLIDER', 'assets/img/slider_bg.png');
+defined('CHAT_UPDATE_TIME')          OR define('CHAT_UPDATE_TIME', 3);

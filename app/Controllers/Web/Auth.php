@@ -83,6 +83,41 @@ class Auth extends WebBaseController
         echo themeView('auth/register');
         echo themeView('partials/_footer');
     }
+    /**
+     * Register Post
+     */
+    public function registerPost()
+    {
+        if (authCheck()) {
+            return redirect()->to(langBaseUrl());
+        }
+        // if ($this->baseVars->recaptchaStatus) {
+        //     if (reCAPTCHA('validate') == 'invalid') {
+        //         setErrorMessage(trans("msg_recaptcha"));
+        //         return redirect()->to(generateUrl('register'));
+        //     }
+        // }
+        $val = \Config\Services::validation();
+        $val->setRule('email', trans("email_address"), 'required|max_length[255]');
+        $val->setRule('password', trans("password"), 'required|min_length[4]|max_length[255]');
+        $val->setRule('confirm_password', trans("password_confirm"), 'required|matches[password]');
+        if (!$this->validate(getValRules($val))) {
+            $this->session->setFlashdata('errors', $val->getErrors());
+            return redirect()->to(generateUrl('register'))->withInput();
+        } else {
+            $email = inputPost('email');
+            if (!$this->authModel->isEmailUnique($email)) {
+                setErrorMessage(trans("msg_email_unique_error"));
+                return redirect()->to(generateUrl('register'))->withInput();
+            }
+            if ($this->authModel->register()) {
+                setSuccessMessage(trans("msg_register_success"));
+                return redirect()->to(generateUrl('settings', 'edit_profile'));
+            }
+        }
+        setErrorMessage(trans("msg_error"));
+        return redirect()->to(generateUrl('register'));
+    }
 
     /**
      * Logout

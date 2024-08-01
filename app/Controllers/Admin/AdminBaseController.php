@@ -2,6 +2,9 @@
 
 namespace App\Controllers\Admin;
 
+use App\Models\AuthModel;
+use App\Models\SettingsModel;
+
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -36,14 +39,32 @@ abstract class AdminBaseController extends Controller
      *
      * @var list<string>
      */
-    protected $helpers = [];
+    protected $helpers = [ 
+        'text', 'cookie','app', 'security'
+    ];
 
     /**
      * Be sure to declare properties for any property fetch you initialized.
      * The creation of dynamic property is deprecated in PHP 8.2.
      */
     // protected $session;
-
+    public $session;
+    public $settingsModel;
+    public $authModel;
+    public $commonModel;
+    public $categoryModel;
+    public $fileModel;
+    public $generalSettings;
+    // public $paymentSettings;
+    // public $productSettings;
+    // public $storageSettings;
+    public $settings;
+    public $activeTheme;
+    public $activeLanguages;
+    public $activeLang;
+    public $defaultCurrency;
+    public $perPage;
+    public $baseVars;
     /**
      * @return void
      */
@@ -62,11 +83,39 @@ abstract class AdminBaseController extends Controller
         $this->settings = Globals::$settings;
         //active languages
         $this->activeLanguages = Globals::$languages;
+        //active lang
+        $this->activeLang = Globals::$activeLang;
+        //default currency
+        $this->defaultCurrency = Globals::$defaultCurrency;
 
-        //check auth
-        // if (!authCheck()) {
-        //     redirectToUrl(adminUrl('login'));
-        //     exit();
-        // }
+        //active theme
+        $this->activeTheme = getActiveTheme();
+
+      //check auth
+      if (!authCheck()) {
+        redirectToUrl(adminUrl('login'));
+        exit();
+       }
+        //check admin
+        if (!isAdmin()) {
+            redirectToUrl(langBaseUrl());
+            exit();
+        }
+
+
+
+        //view variables
+        $view = \Config\Services::renderer();
+        $view->setData([
+            'generalSettings' => $this->generalSettings, 
+            // 'paymentSettings' => $this->paymentSettings, 
+            // 'productSettings' => $this->productSettings, 
+            'baseSettings' => $this->settings, 
+            'activeTheme' => $this->activeTheme, 
+            'activeLanguages' => $this->activeLanguages, 
+            'activeLang' => $this->activeLang,
+            // 'defaultCurrency' => $this->defaultCurrency, 
+            // 'baseVars' => $this->baseVars
+            ]);
     }
 }

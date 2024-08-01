@@ -17,16 +17,21 @@ class Home extends WebBaseController
     }
     public function index()
     {
-        $data['title'] = $this->settings->home_title;
-        $data['description'] = $this->settings->site_description;
-        $data['keywords'] = $this->settings->keywords;
-        $data['homeTitle'] = $this->settings->home_title;
+        $data = [
+            'title' => $this->settings->home_title,
+            'description' => $this->settings->site_description,
+            'keywords' => $this->settings->keywords
+        ];
+        // $data['title'] = $this->settings->home_title;
+        // $data['description'] = $this->settings->site_description;
+        // $data['keywords'] = $this->settings->keywords;
+        // $data['homeTitle'] = $this->settings->home_title;
 
 
         //  
         echo themeView('partials/_header',$data);
         echo themeView('index',$data);
-           echo themeView('partials/_footer');
+        echo themeView('partials/_footer',$data);
     }
 
 

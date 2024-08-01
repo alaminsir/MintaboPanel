@@ -265,6 +265,22 @@ if (!function_exists('user')) {
     }
 }
 
+// //auth check
+// if (!function_exists('authStaffCheck')) {
+//     function authStaffCheck()
+//     {
+//         return Globals::$authStaffCheck;
+//     }
+// }
+
+// //get active user
+// if (!function_exists('staff')) {
+//     function staff()
+//     {
+//         return Globals::$authStaff;
+//     }
+// }
+
 //get user by id
 if (!function_exists('getUserById')) {
     function getUserById($id)
@@ -279,7 +295,7 @@ if (!function_exists('isAdmin')) {
     function isAdmin()
     {
         if (authCheck()) {
-            if (user()->role == 'admin') {
+            if (user()->role_id == 1) {
                 return true;
             }
         }
@@ -761,6 +777,19 @@ if (!function_exists('cleanNumber')) {
             return 0;
         }
         return intval($num);
+    }
+}
+//clean number
+if (!function_exists('clrNum')) {
+    function clrNum($num)
+    {
+        $num = trim($num ?? '');
+        $num = esc($num ?? '');
+        $num = intval($num ?? '');
+        if (!empty($num)) {
+            return $num;
+        }
+        return 0;
     }
 }
 
@@ -2376,5 +2405,51 @@ if (!function_exists('resetFlashData')) {
         $session->setFlashdata('errors', '');
         $session->setFlashdata('error', '');
         $session->setFlashdata('success', '');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//dashboard url
+if (!function_exists('dashboardUrl')) {
+    function dashboardUrl($route = null)
+    {
+        if (!empty($route)) {
+            return langBaseUrl() . '/' . Globals::$customRoutes->dashboard . '/' . $route;
+        }
+        return langBaseUrl() . '/' . Globals::$customRoutes->dashboard;
+    }
+}
+
+
+//check admin nav
+if (!function_exists('isAdminNavActive')) {
+    function isAdminNavActive($arrayNavItems)
+    {
+        $segment = getSegmentValue(2);
+        if (!empty($segment) && !empty($arrayNavItems)) {
+            if (in_array($segment, $arrayNavItems)) {
+                echo ' ' . 'active';
+            }
+        }
     }
 }

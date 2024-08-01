@@ -1,16 +1,16 @@
-<div id="wrapper">
+<div id="wrapper" class="index-wrapper">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="support">
-          <!-- <nav class="nav-breadcrumb" aria-label="breadcrumb">
+          <nav class="nav-breadcrumb" aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="https://modesy.codingest.com">Home</a>
+                <a href="<?= langBaseUrl();?>">Home</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">Help Center</li>
             </ol>
-          </nav> -->
+          </nav>
           <h1 class="page-title main-title">
             <strong>How can we help?</strong>
           </h1>

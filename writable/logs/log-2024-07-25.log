@@ -1,0 +1,517 @@
+CRITICAL - 2024-07-25 00:53:32 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/img/img_bg_blog_small.jpg]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'img', 'img_bg_blog_small.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 00:53:35 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/img/img_bg_blog_small.jpg]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'img', 'img_bg_blog_small.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 00:55:15 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/img/img_bg_blog_small.jpg]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'img', 'img_bg_blog_small.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:00:10 --> ErrorException: Undefined property: App\Controllers\Web\Hosting::$blogPerPage
+[Method: GET, Route: hosting/shared-hosting]
+in APPPATH\Controllers\Web\Hosting.php on line 70.
+ 1 APPPATH\Controllers\Web\Hosting.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Web\\Hosting::$blogPerPage', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Hosting.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:00:23 --> Error: Call to undefined function App\Models\Hosting\selectedLangId()
+[Method: GET, Route: hosting/shared-hosting]
+in APPPATH\Models\Hosting\HostingModel.php on line 103.
+ 1 APPPATH\Models\Hosting\HostingModel.php(197): App\Models\Hosting\HostingModel->builQuery()
+ 2 APPPATH\Controllers\Web\Hosting.php(70): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 01:00:54 --> mysqli_sql_exception: Unknown table 'mintabo.blog_posts' in E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `blog_po...', 0)
+#1 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `blog_po...')
+#2 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `blog_po...')
+#3 E:\xampp\htdocs\MintaboPanel\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `blog_po...', Array, false)
+#4 E:\xampp\htdocs\MintaboPanel\app\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\MintaboPanel\app\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+#6 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+#7 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+#8 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\MintaboPanel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\MintaboPanel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\xampp\htdocs\MintaboPanel\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-25 01:00:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'mintabo.blog_posts'
+[Method: GET, Route: hosting/shared-hosting]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `blog_posts`.*, `blog_categories`.`name` AS `category_name`, `blog_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `blog_categories` ON `blog_posts`.`category_id` = `blog_categories`.`id`
+WHERE `blog_posts`.`lang_id` = :blog_posts.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 2 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:00:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'mintabo.blog_posts'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `blog_posts`.*, `blog_categories`.`name` AS `category_name`, `blog_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `blog_categories` ON `blog_posts`.`category_id` = `blog_categories`.`id`
+WHERE `blog_posts`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `blog_posts`.*, `blog_categories`.`name` AS `category_name`, `blog_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `blog_categories` ON `blog_posts`.`category_id` = `blog_categories`.`id`
+WHERE `blog_posts`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `blog_posts`.*, `blog_categories`.`name` AS `category_name`, `blog_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `blog_categories` ON `blog_posts`.`category_id` = `blog_categories`.`id`
+WHERE `blog_posts`.`lang_id` = :blog_posts.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 4 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:00:54 --> [Caused by] mysqli_sql_exception: Unknown table 'mintabo.blog_posts'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `blog_posts`.*, `blog_categories`.`name` AS `category_name`, `blog_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `blog_categories` ON `blog_posts`.`category_id` = `blog_categories`.`id`
+WHERE `blog_posts`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `blog_posts`.*, `blog_categories`.`name` AS `category_name`, `blog_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `blog_categories` ON `blog_posts`.`category_id` = `blog_categories`.`id`
+WHERE `blog_posts`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `blog_posts`.*, `blog_categories`.`name` AS `category_name`, `blog_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `blog_categories` ON `blog_posts`.`category_id` = `blog_categories`.`id`
+WHERE `blog_posts`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `blog_posts`.*, `blog_categories`.`name` AS `category_name`, `blog_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `blog_categories` ON `blog_posts`.`category_id` = `blog_categories`.`id`
+WHERE `blog_posts`.`lang_id` = :blog_posts.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 5 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 01:02:07 --> mysqli_sql_exception: Unknown column 'hosting_plans.lang_id' in 'where clause' in E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `hosting...', 0)
+#1 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting...')
+#2 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting...')
+#3 E:\xampp\htdocs\MintaboPanel\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting...', Array, false)
+#4 E:\xampp\htdocs\MintaboPanel\app\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\MintaboPanel\app\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+#6 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+#7 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+#8 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\MintaboPanel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\MintaboPanel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\xampp\htdocs\MintaboPanel\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-25 01:02:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'hosting_plans.lang_id' in 'where clause'
+[Method: GET, Route: hosting/shared-hosting]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 2 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:02:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'hosting_plans.lang_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 4 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:02:07 --> [Caused by] mysqli_sql_exception: Unknown column 'hosting_plans.lang_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 5 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 01:06:11 --> mysqli_sql_exception: Unknown column 'blog_posts.category_id' in 'on clause' in E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `hosting...', 0)
+#1 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting...')
+#2 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting...')
+#3 E:\xampp\htdocs\MintaboPanel\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting...', Array, false)
+#4 E:\xampp\htdocs\MintaboPanel\app\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\MintaboPanel\app\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+#6 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+#7 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+#8 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\MintaboPanel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\MintaboPanel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\xampp\htdocs\MintaboPanel\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-25 01:06:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'blog_posts.category_id' in 'on clause'
+[Method: GET, Route: hosting/shared-hosting]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 2 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:06:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'blog_posts.category_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 4 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:06:11 --> [Caused by] mysqli_sql_exception: Unknown column 'blog_posts.category_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `blog_posts`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 5 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 01:06:34 --> mysqli_sql_exception: Unknown column 'created_at' in 'order clause' in E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 E:\xampp\htdocs\MintaboPanel\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `hosting...', 0)
+#1 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting...')
+#2 E:\xampp\htdocs\MintaboPanel\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting...')
+#3 E:\xampp\htdocs\MintaboPanel\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting...', Array, false)
+#4 E:\xampp\htdocs\MintaboPanel\app\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\MintaboPanel\app\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+#6 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+#7 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+#8 E:\xampp\htdocs\MintaboPanel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\MintaboPanel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\MintaboPanel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\xampp\htdocs\MintaboPanel\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-25 01:06:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'order clause'
+[Method: GET, Route: hosting/shared-hosting]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `hosting_plans`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 2 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:06:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `hosting_plans`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `hosting_plans`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `hosting_plans`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 4 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:06:34 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `hosting_plans`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `hosting_plans`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `hosting_plans`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = 1
+AND `category_id` = 1
+ORDER BY `created_at` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT `hosting_plans`.*, `hosting_categories`.`name` AS `category_name`, `hosting_categories`.`slug` AS `category_slug`
+FROM `hosting_plans`
+JOIN `hosting_categories` ON `hosting_plans`.`category_id` = `hosting_categories`.`id`
+WHERE `hosting_plans`.`lang_id` = :hosting_plans.lang_id:
+AND `category_id` = :category_id.1:
+ORDER BY `created_at` DESC
+ LIMIT 3', [...], false)
+ 5 APPPATH\Models\Hosting\HostingModel.php(198): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Web\Hosting.php(71): App\Models\Hosting\HostingModel->getCategoryPostsPaginated('1', 3, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 01:15:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "themes/twobook/hosting/_blog_item.php"
+[Method: GET, Route: hosting/shared-hosting]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('themes/twobook/hosting/_blog_item.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/twobook/hosting/_blog_item', [], true)
+ 3 APPPATH\Common.php(106): view('themes/twobook/hosting/_blog_item', [...])
+ 4 APPPATH\Views\themes\twobook\hosting\shared-hosting.php(57): themeView('hosting/_blog_item', [...])
+ 5 SYSTEMPATH\View\View.php(234): include('E:\\xampp\\htdocs\\MintaboPanel\\app\\Views\\themes\\twobook\\hosting\\shared-hosting.php')
+ 6 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('themes/twobook/hosting/shared-hosting', [], true)
+ 8 APPPATH\Common.php(106): view('themes/twobook/hosting/shared-hosting', [...])
+ 9 APPPATH\Controllers\Web\Hosting.php(75): themeView('hosting/shared-hosting', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Hosting->category('shared-hosting')
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Hosting))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 02:40:18 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/img/img_bg_blog_small.jpg]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'img', 'img_bg_blog_small.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 02:40:20 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: assets/img/img_bg_blog_small.jpg]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('assets', 'img', 'img_bg_blog_small.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 02:43:30 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: admin/login]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('admin', 'login')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 02:44:02 --> ErrorException: Undefined variable $pageModel
+[Method: GET, Route: admin/home]
+in APPPATH\Controllers\Web\Page.php on line 103.
+ 1 APPPATH\Controllers\Web\Page.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageModel', 'E:\\xampp\\htdocs\\MintaboPanel\\app\\Controllers\\Web\\Page.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Web\Page->any('admin', 'home')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Page))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

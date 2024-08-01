@@ -92,7 +92,11 @@ class PageModel extends BaseModel
     {
         return $this->builder->orderBy('page_order')->get()->getResult();
     }
-
+    //get page
+    public function getPage($slug)
+    {
+        return $this->builder->where('slug', strSlug($slug))->where('visibility', 1)->where('pages.lang_id', selectedLangId())->get()->getRow();
+    }
     //get page by id
     public function getPageById($id)
     {

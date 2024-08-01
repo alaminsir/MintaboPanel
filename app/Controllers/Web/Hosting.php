@@ -3,14 +3,25 @@
 namespace App\Controllers\Web;
 
 use App\Models\PageModel;
+use App\Models\Hosting\HostingModel;
 
-// use CodeIgniter\Controller;
 use Config\Globals;
 
 
 class Hosting extends WebBaseController
 {
+    public $pageModel;
+    public $hostingModel;
+    protected $hostingPerPage;
+    protected $helpers = ['app'];
 
+    public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
+    {
+        parent::initController($request, $response, $logger);
+        $this->hostingModel = new HostingModel();
+        $this->pageModel = new PageModel();
+        $this->hostingPerPage = 3;
+    }
     public function index()
     {
         $pageModel = new PageModel();
@@ -43,25 +54,26 @@ class Hosting extends WebBaseController
         /**
      * Blog Category
      */
-    private function Category($slug)
+    public function category($slug)
     {
-        // $data['category'] = $this->blogModel->getCategoryBySlug($slug);
-        // if (empty($data['category'])) {
-        //     return redirect()->to(generateUrl('blog'));
-        // }
-        // $data['title'] = $data['category']->name;
-        // $data['description'] = $data['category']->description;
-        // $data['keywords'] = $data['category']->keywords;
-        // $data["activeCategory"] = $data['category']->slug;
+        // echo $slug;
+        $data['category'] = $this->hostingModel->getCategoryBySlug($slug);
+        if (empty($data['category'])) {
+            return redirect()->to(generateUrl('hosting'));
+        }
+        $data['title'] = $data['category']->name;
+        $data['description'] = $data['category']->description;
+        $data['keywords'] = $data['category']->keywords;
+        $data["activeCategory"] = $data['category']->slug;
         
-        // $numRows = $this->blogModel->getPostCountByCategory($data['category']->id);
-        // $data['pager'] = paginate($this->blogPerPage, $numRows);
-        // $data['posts'] = $this->blogModel->getCategoryPostsPaginated($data['category']->id, $this->blogPerPage, $data['pager']->offset);
-        // $data['categories'] = $this->blogModel->getCategoriesByLang(selectedLangId());
-
-        // echo view('partials/_header', $data);
-        // echo view('blog/index', $data);
-        // echo view('partials/_footer');
+        $numRows = $this->hostingModel->getPostCountByCategory($data['category']->id);
+         $data['pager'] = paginate($this->hostingPerPage, $numRows);
+         $data['hosting_plans'] = $this->hostingModel->getCategoryPostsPaginated($data['category']->id, $this->hostingPerPage, $data['pager']->offset);
+        // $data['categories'] = $this->hostingModel->getCategoriesByLang(selectedLangId());
+// print_r($data);
+        echo themeView('partials/_header', $data);
+        echo themeView('hosting/'.$slug, $data);
+        echo themeView('partials/_footer');
     }
 
 

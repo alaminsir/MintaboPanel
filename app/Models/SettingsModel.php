@@ -32,6 +32,102 @@ class SettingsModel extends BaseModel
 
 
 
+    //get settings
+    public function getSettings($langId)
+    {
+        return $this->builder->where('lang_id', cleanNumber($langId))->get()->getRow();
+    }
+
+    //get general settings
+    public function getGeneralSettings()
+    {
+        return $this->builderGeneral->where('id', 1)->get()->getRow();
+    }
+
+    //get routes
+    public function getRoutes()
+    {
+        return $this->db->table('routes')->where('id', 1)->get()->getRow();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    *------------------------------------------------------------------------------------------
+     * Themes
+    *------------------------------------------------------------------------------------------
+    */
+
+    //set theme mode
+    public function setThemeMode()
+    {
+        $mode = inputPost('theme_mode');
+        if ($mode == 'light' || $mode == 'dark') {
+            helperSetCookie('theme_mode', $mode);
+            $this->builderGeneral->where('id', 1)->update(['theme_mode' => $mode]);
+        }
+    }
+
+    //set theme
+    public function setTheme()
+    {
+        $id = inputPost('theme_id');
+        $theme = $this->getTheme($id);
+        if (!empty($theme)) {
+            $this->db->table('themes')->update(['is_active' => 0]);
+            $this->db->table('themes')->where('id', $theme->id)->update(['is_active' => 1]);
+        }
+    }
+
+    //set theme settings
+    public function setThemeSettings()
+    {
+        $id = inputPost('id');
+        $theme = $this->getTheme($id);
+        if (!empty($theme)) {
+            $data = [
+                'theme_color' => inputPost('theme_color'),
+                'block_color' => inputPost('block_color'),
+                'mega_menu_color' => inputPost('mega_menu_color')
+            ];
+            $this->db->table('themes')->where('id', $theme->id)->update($data);
+        }
+    }
+
+    //get theme
+    public function getTheme($id)
+    {
+        return $this->db->table('themes')->where('id', cleanNumber($id))->get()->getRow();
+    }
+
+    //get themes
+    public function getThemes()
+    {
+        return $this->db->table('themes')->get()->getResult();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

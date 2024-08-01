@@ -55,21 +55,16 @@
                     <?php endif;?>
                     <?php if(authCheck()):?>
                     <li class="nav-item dropdown profile-dropdown p-r-0">
-                        <a class="nav-link dropdown-toggle a-profile" data-toggle="dropdown" href="javascript:void(0)"
-                            aria-expanded="false"><img
-                                src="http://localhost/modesy/uploads/profile/avatar_669220c9ecca49-70342542.webp"
-                                alt="MaP Hunter"><?= esc(user()->username); ?><i class="icon-arrow-down"></i><span
-                                class="message-notification">1</span></a>
+                        <a class="nav-link dropdown-toggle a-profile" data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false">
+                            <img src="<?= getUserAvatar(user()->avatar); ?>" alt="MaP Hunter"><?= esc(user()->username); ?><i class="icon-arrow-down"></i><span class="message-notification">1</span></a>
                         <ul class="dropdown-menu" style="">
-                            <li><a href="http://localhost/modesy/admin"><i class="icon-admin"></i>Admin Panel</a></li>
+                            <li><a href="<?= adminUrl('home');?>"><i class="icon-admin"></i>Admin Panel</a></li>
                             <li><a href="http://localhost/modesy/dashboard"><i class="icon-dashboard"></i>Dashboard</a>
                             </li>
-                            <li><a href="http://localhost/modesy/profile/map-hunter"><i
-                                        class="icon-user"></i>Profile</a></li>
+                            <li><a href="http://localhost/modesy/profile/map-hunter"><i class="icon-user"></i>Profile</a></li>
                             <li><a href="http://localhost/modesy/orders"><i class="icon-shopping-basket"></i>Orders</a>
                             </li>
-                            <li><a href="http://localhost/modesy/quote-requests"><i class="icon-price-tag-o"></i>Quote
-                                    Requests</a></li>
+                            <li><a href="http://localhost/modesy/quote-requests"><i class="icon-price-tag-o"></i>Quote Requests</a></li>
                             <li><a href="http://localhost/modesy/downloads"><i class="icon-download"></i>Downloads</a>
                             </li>
                             <li><a href="http://localhost/modesy/my-coupons">

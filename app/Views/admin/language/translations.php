@@ -50,11 +50,11 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <?php $show = clrNum(inputGet('show'));
+                            <?php $show = cleanNumber(inputGet('show'));
                             if (empty($show)) {
                                 $show = 15;
                             }
-                            $page = clrNum(inputGet('page'));
+                            $page = cleanNumber(inputGet('page'));
                             if (empty($page)) {
                                 $page = 1;
                             }

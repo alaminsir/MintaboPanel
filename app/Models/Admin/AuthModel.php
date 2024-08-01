@@ -30,29 +30,29 @@ class AuthModel extends AdminBaseModel
     public function login()
     {
         $data = $this->inputValues();
-        $user = $this->getUserByEmail($data['email']);
+        $staff = $this->getUserByEmail($data['email']);
         if (!empty($user)) {
-            if (!password_verify($data['password'], $user->password)) {
+            if (!password_verify($data['password'], $staff->password)) {
                 return false;
             }
-            // if ($user->status == 0) {
+            // if ($user->banned == 0) {
             //     return 'banned';
             // }
-            $this->loginUser($user);
+            $this->loginStaff($staff);
             return "success";
         }
         return false;
     }
     //login user
-    public function loginUser($user)
+    public function loginStaff($staff)
     {
-        if (!empty($user)) {
-            $userData = array(
-                'min_ses_id' => $user->id,
-                'min_ses_role_id' => $user->role_id,
-                'min_ses_pass' => md5($user->password ?? '')
+        if (!empty($staff)) {
+            $staffData = array(
+                'min_staff_ses_id' => $staff->id,
+                'min_staff_ses_role_id' => $staff->role_id,
+                'min_staff_ses_pass' => md5($staff->password ?? '')
             );
-            $this->session->set($userData);
+            $this->session->set($staffData);
         }
     }
 

@@ -24,7 +24,9 @@ class Globals extends BaseConfig
     public static $langBaseUrl = '';
     public static $langSegment = '';
     public static $authCheck = false;
+    public static $authStaffCheck = false;
     public static $authUser = null;
+    public static $authStaff = null;
     public static $currencies = array();
     public static $defaultCurrency = array();
     public static $defaultLocation = array();
@@ -108,6 +110,20 @@ class Globals extends BaseConfig
                 self::$authUser = $user;
             }
         }
+        // if (!empty($session->get('min_staff_ses_id')) && !empty($session->get('min_staff_ses_role_id')) && !empty($session->get('min_staff_ses_pass'))) {
+           
+        //     $staff = self::$db->table('admins')
+        //         ->join('roles_permissions', 'roles_permissions.id = users.role_id')
+        //         ->where('users.id', cleanNumber($session->get('min_staff_ses_id')))
+        //         ->select('users.*, role_name, permissions, is_super_admin, is_admin, is_vendor, is_member')
+        //         ->get()
+        //         ->getRow();
+           
+        //         if (!empty($staff) && $staff->banned != 1 && md5($staff->password ?? '') == $session->get('min_staff_ses_pass')) {
+        //         self::$authStaffCheck = true;
+        //         self::$authStaff = $staff;
+        //     }
+        // }
         //Chatgpt code
         // if (!empty($session->get('min_ses_id')) && !empty($session->get('min_ses_role_id')) && !empty($session->get('min_ses_pass'))) {
         //     $userId = cleanNumber($session->get('min_ses_id'));
@@ -115,10 +131,11 @@ class Globals extends BaseConfig
         //     $sessionPassword = $session->get('min_ses_pass');
             
         //     // Determine if the user is an admin or regular user
-        //     if ($roleId === 'admin') {
+        //     if ($roleId === 1) {
         //         $user = self::$db->table('admins')
-        //             ->where('id', $userId)
-        //             ->select('id, username, email, password, role, banned')
+        //             ->join('roles_permissions', 'roles_permissions.id = users.role_id')
+        //             ->where('admins.id', $userId)
+        //             ->select('admins.*, role_name, permissions, is_super_admin, is_admin, is_vendor, is_member')
         //             ->get()
         //             ->getRow();
         //     } else {
@@ -137,6 +154,11 @@ class Globals extends BaseConfig
         //             } 
         //         }
         // }
+    //     echo "<pre>";
+    //     print_r(user());
+
+    // echo "</pre>";
+
                 //authentication varient
                 // if (!empty($session->get('min_ses_id')) && !empty($session->get('min_ses_role')) && !empty($session->get('vr_ses_pass'))) {
                 //     $user = self::$db->table('users')->where('id', cleanNumber($session->get('vr_ses_id')))->get()->getRow();
